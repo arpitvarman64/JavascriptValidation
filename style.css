@@ -1,0 +1,42 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+  
+
+}
+.form-container {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 20px;
+  /* background: linear-gradient(
+      to bottom,
+      #87cefa,
+      #ffff00,
+      #adff2f,
+      #ffff00,
+      #87cefa
+    ); */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 1px 1px rgb(196, 158, 158);
+  margin-top: 12px;
+  background-color: aqua;
+}
+
+#dobError{
+  color: red;
+}
+#addressError{
+  color: red;
+}
+#submitBtn {
+  margin-left: 20px; /* Default margin */
+}
+
+@media screen and (max-width: 600px) {
+  #submitBtn {
+    margin-left: auto; /* Set margin to auto to center the element */
+    display: block;    /* Ensure the element is a block-level element */
+  }
+}

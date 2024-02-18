@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Animated Registration Form</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  
+  <script src="validation.js"></script>
+
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-8 form-container">
+        <h2 class="text-center mb-4">Student Information Form</h2>
+        <form id="studentForm">
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="firstName">First Name</label>
+              <input type="text" class="form-control" id="firstName" placeholder="First Name"
+                oninput="validateFirstName()" />
+              <div id="firstNameError" style="color: red"></div>
+            </div>
+
+            <div class="form-group col-md-6">
+              <label for="lastName">Last Name</label>
+              <input type="text" class="form-control" id="lastName" placeholder="Last Name" oninput="validateNames()" />
+              <div id="lastNameError" style="color: red"></div>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="dob">Date of Birth</label>
+              <input type="date" class="form-control" id="dob" oninput="validateDob()" />
+              <div class="error-message" id="dobError"></div>
+            </div>
+            <div class="form-group col-md-6">
+              <label>Gender</label>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" id="male" name="gender" value="male" />
+                <label class="form-check-label" for="male">Male</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" id="female" name="gender" value="female" />
+                <label class="form-check-label" for="female">Female</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" id="other" name="gender" value="other" />
+                <label class="form-check-label" for="other">Other</label>
+              </div>
+              <div class="error-message" id="genderError"></div>
+              <!-- Add this line for gender error message -->
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group col-md-12">
+              <label for="collegeName">College Name</label>
+              <input type="text" class="form-control" id="collegeName" placeholder="Enter your College Name"
+                oninput="validateCollegeName()" />
+              <div id="collegeNameError" style="color: red"></div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="degree">Degree</label>
+              <select class="form-control" id="degree">
+                <option value="" disabled selected>Select your Degree</option>
+                <option value="bachelor">Bachelor's Degree</option>
+                <option value="master">Master's Degree</option>
+                <option value="phd">Ph.D.</option>
+                <!-- Add more options as needed -->
+              </select>
+              <div id="degreeError" style="color: red"></div>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="course">Course</label>
+              <input type="text" class="form-control" id="course" placeholder="Enter your Course"
+                oninput="validateCourse()" />
+              <div id="courseError" style="color: red"></div>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group col-md-12">
+              <label for="address">Address</label>
+              <textarea class="form-control" id="address" placeholder="Address"></textarea>
+              <div class="error-message" id="addressError"></div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="bloodGroup">Blood Group</label>
+              <input type="text" class="form-control" id="bloodGroup" placeholder="Blood Group" />
+              <div id="bloodGroupError" style="color: red"></div>
+            </div>
+
+            <div class="form-group col-md-6">
+              <label for="pincode">Pincode</label>
+              <input type="text" class="form-control" id="pincode" placeholder="Pincode" />
+              <div class="error-message" id="pincodeError" style="color: red"></div>
+            </div>
+          </div>
+
+          <button type="button" id="submitBtn" class="btn btn-primary" onclick="validateForm()">
+            Submit
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
